@@ -1,0 +1,33 @@
+<p>books works!</p>
+
+
+<button (click)="handleClick()" (mouseover)="handleClick()" [disabled]="isDisabled">show</button>
+<input type="text" (input)="handleInput($event)" placeholder="Enter your name" />
+<h3>{{ myName}}</h3>
+<h1><input type="text" [(ngModel)]="newname"/></h1>
+
+<p>you Enterd: {{newname}}</p>
+
+<!-- <button (click)="this.isShowing=!this.isShowing">
+    <span *ngIf="!isShowing">Show list</span>
+    <span *ngIf="isShowing">Hide list</span>
+</button> -->
+
+
+
+<button (click)="this.isShowing=!this.isShowing">
+    <ng-container *ngIf="!isShowing">Show list</ng-container>
+    <ng-container *ngIf="isShowing">Hide list</ng-container>
+</button>
+
+<ul *ngIf="isShowing">
+    <ng-container *ngFor="let oneBook of books">
+      <app-book (bookEmitter)="addToCard($event)" [book]="oneBook" ></app-book> 
+    </ng-container>
+
+    <!-- <li *ngFor="let book of books">
+        <img [src]="book.src" alt="{{book.name}}"width="100">    
+    </li> -->
+
+</ul>
+ 

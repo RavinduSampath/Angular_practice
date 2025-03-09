@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { BooksComponent } from "./books/books.component";
+import { FormsModule } from '@angular/forms';
+import { BookComponent } from "./book/book.component"; // Import FormsModule
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet, BooksComponent, FormsModule, HomeComponent], // Add FormsModule here
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'first';
+  title = 'testing-app';
+  
 }
