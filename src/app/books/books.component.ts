@@ -68,9 +68,9 @@ isShowing: boolean = false;
 books: Book[] =[] ;
 
 card: Book[]=[];
-addToCard(book: Book){
-  this.card.push(book);
-  console.log(this.card);
-}
+// addToCard(book: Book){
+//   this.card.push(book);
+//   console.log(this.card);
+// }
 
 }
