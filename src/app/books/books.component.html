@@ -22,7 +22,8 @@
 
 <ul *ngIf="isShowing">
     <ng-container *ngFor="let oneBook of books">
-      <app-book (bookEmitter)="addToCard($event)" [book]="oneBook" ></app-book> 
+      <!-- <app-book (bookEmitter)="addToCard($event)" [book]="oneBook" ></app-book>  -->
+      <app-book  [book]="oneBook" ></app-book> 
     </ng-container>
 
     <!-- <li *ngFor="let book of books">
