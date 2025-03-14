@@ -14,8 +14,13 @@ export class CartService {
   constructor() { }
 
   add(book: Book){
-    console.log(book);
+    // console.log(book);
+    this.cart.push(book);
+    console.log(this.cart);
     
+  }
+  getCart(){
+    return this.cart;
   }
 
 
