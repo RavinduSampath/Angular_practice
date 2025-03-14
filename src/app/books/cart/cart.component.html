@@ -1,1 +1,26 @@
+<h1>My Cart</h1>
+<!-- <div>
+    {{getCart().length}}
+</div> -->
+<div *ngIf="getCart().length == 0">
+  <h3>Your cart is empty</h3>
+</div>
+<div style="display: flex;" *ngIf="getCart().length > 0">
+    <ul>
+        <li *ngFor="let book of getCart()">
+        <img [src]="book.src" alt="{{book.name}}" width="100">
+        <div class="title">{{book.name}} by {{book.author }}</div>
+        <div>price is {{book.price}}</div>
+        <button >Remove from cart</button>
+        </li>
+    </ul>
+</div>
+<!-- <div>
+    <button>Checkout</button>  
+</div> -->
+
+
+<!-- <div *ngIf="getCart().length > 0"> -->
+    
+
 
