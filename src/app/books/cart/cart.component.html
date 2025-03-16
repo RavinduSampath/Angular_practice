@@ -5,9 +5,9 @@
 <div *ngIf="getCart().length == 0">
   <h3>Your cart is empty</h3>
 </div>
-<div style="display: flex;" *ngIf="getCart().length > 0">
-    <ul>
-        <li *ngFor="let book of getCart()">
+<div *ngIf="getCart().length > 0">
+    <ul style="display: flex;">
+        <li style="padding: 10px;" *ngFor="let book of getCart()">
         <img [src]="book.src" alt="{{book.name}}" width="100">
         <div class="title">{{book.name}} by {{book.author }}</div>
         <div>price is {{book.price}}</div>
