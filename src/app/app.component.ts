@@ -9,10 +9,7 @@ import { CartComponent } from "./books/cart/cart.component"; // Import FormsModu
 @Component({
   selector: 'app-root',
   standalone: true,
-  //imports: [RouterOutlet, BooksComponent, FormsModule, HomeComponent, CartComponent], // Add FormsModule here
-
-  imports: [ BooksComponent, FormsModule],
-
+  imports: [ BooksComponent, FormsModule, HomeComponent, CartComponent], // Add FormsModule here
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
