@@ -9,11 +9,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './cart.component.scss'
 })
 export class CartComponent {
+getCart() {
+throw new Error('Method not implemented.');
+}
   constructor(private cartService: CartService) {
     
-  }
-  getCart() {
-    return this.cartService.getCart();
   }
 
 }

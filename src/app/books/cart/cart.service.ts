@@ -14,11 +14,10 @@ export class CartService {
   constructor() { }
 
   add(book: Book){
-    // console.log(book);
-    this.cart.push(book);
-    console.log(this.cart);
+    console.log(book);
     
   }
+
   getCart(){
     return this.cart;
   }
