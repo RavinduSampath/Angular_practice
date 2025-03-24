@@ -17,6 +17,7 @@ export class CartService {
     console.log(book);
     
   }
+<<<<<<< HEAD
 
   getCart(){
     return this.cart;
@@ -25,6 +26,8 @@ export class CartService {
     this.cart = this.cart.filter((b)=>b != book);
 
   } 
+=======
+>>>>>>> parent of 974ceda (Merge pull request #3 from RavinduSampath/dev)
 
 
 }
